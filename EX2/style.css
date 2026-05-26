@@ -10,22 +10,24 @@ body {
     display: flex;
     justify-content: center;
     padding: 2rem;
+    min-height: 100vh;
 }
 
-.container {
+form, .result-box {
     background: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     padding: 2rem;
     width: 100%;
     max-width: 360px;
+    height: fit-content;
 }
 
 h3 {
     font-size: 1.2rem;
     font-weight: 500;
-    margin-bottom: 1.5rem;
     color: #111;
+    margin-bottom: 1.5rem;
 }
 
 label {
@@ -41,6 +43,7 @@ input[type="text"] {
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 6px;
+    background: #fafafa;
     margin-bottom: 1rem;
     outline: none;
 }
@@ -49,7 +52,7 @@ input[type="text"]:focus {
     border-color: #888;
 }
 
-button {
+button[type="submit"] {
     width: 100%;
     padding: 9px;
     font-size: 1rem;
@@ -60,50 +63,48 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button[type="submit"]:hover {
     background: #f0f0f0;
 }
 
-p {
-    font-size: 1rem;
-    color: #222;
-    padding: 6px 0;
-    border-bottom: 1px solid #eee;
-}
-
-p:last-child {
-    border-bottom: none;
-}
-.subtitle {
-    font-size: 0.85rem;
-    color: #888;
-    margin-bottom: 1.25rem;
-}
-
-.row {
+.card {
+    background: #f9f9f9;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 12px;
-    border-radius: 6px;
-    margin-bottom: 4px;
-    background: #f9f9f9;
 }
 
-.row:nth-child(odd) {
+.card.highlight {
     background: #fff;
-    border: 1px solid #eee;
+    border: 1px solid #e0e0e0;
 }
 
-.expr {
-    font-size: 0.9rem;
-    color: #666;
+.card-label {
+    font-size: 0.85rem;
+    color: #888;
 }
 
-.result {
+.card-value {
     font-size: 1rem;
     font-weight: 500;
     color: #111;
+}
+
+.card.highlight .card-value {
+    font-size: 1.1rem;
+    color: #2a7a4b;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: #e6f4ed;
+    color: #2a7a4b;
+    margin-left: 6px;
 }
 
 .back {
