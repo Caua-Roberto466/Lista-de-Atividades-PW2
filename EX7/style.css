@@ -85,8 +85,18 @@ button[type="submit"]:hover {
     font-size: 2rem;
     font-weight: 600;
     color: #111;
-    margin: 1rem 0 1.75rem;
+    margin: 1rem 0 0.5rem;
 }
+
+.status {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 1.75rem;
+}
+
+.status.aprovado { color: #2a7a4b; }
+.status.exame    { color: #b07a1e; }
+.status.retido   { color: #b0351e; }
 
 .back {
     display: block;

@@ -3,33 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabuada</title>
+    <title>Média das notas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <form action="processar.php" method="post" onsubmit="return validar()">
-        <h3></h3>
-        <label for="num1">Insira o 1º número</label>
-        <input type="text" name="num1" id="num1" required placeholder="Digite o preço do produto">
+        <h3>Avaliando notas</h3>
+        <label for="nota1">Insira a 1º nota</label>
+        <input type="text" name="nota1" id="nota1" required placeholder="Digite a 1º nota">
         <br>
-        <label for="num2">Insira o 2º número</label>
-        <input type="text" name="num2" id="num2" required placeholder="Digite a porcentagem do Desconto">
+        <label for="nota2">Insira a 2º nota</label>
+        <input type="text" name="nota2" id="nota2" required placeholder="Digite a 2º nota">
         <br>
-        <label for="num3">Insira o 3º número</label>
-        <input type="text" name="num3" id="num3" required placeholder="Digite a porcentagem do Desconto">
+        <label for="nota3">Insira a 3º nota</label>
+        <input type="text" name="nota3" id="nota3" required placeholder="Digite a 3º nota">
+        <br>
+        <label for="nota4">Insira a 4º nota</label>
+        <input type="text" name="nota4" id="nota4" required placeholder="Digite a 4º nota">
         <p id="erro" style="color: red; font-size: 120%; display: none; font-family: Arial, Helvetica, sans-serif;">Valor inválido! Digite apenas números.</p>
         <button type="submit">Enviar</button>
     </form>
 
     <script>
         function validar(){
-            const campos = ['num1', 'num2', 'num3'];
+            const campos = ['nota1', 'nota2', 'nota3', 'nota4'];
             const erro = document.getElementById('erro');
 
             for(let id of campos){
                 const valor = document.getElementById(id).value;
 
-                if(isNaN(valor) || valor.trim() === '' || valor.includes('.')){
+                if(isNaN(valor) || valor.trim() === '' || valor.includes('.') || valor < 0 || valor > 10){
                     erro.style.display = "block";
                     return false;
                 }

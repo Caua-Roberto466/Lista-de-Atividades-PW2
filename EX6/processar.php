@@ -18,7 +18,7 @@ $salFinal = $sal + $grat - $impst;
         <p class="resultado">
             <?= number_format($salFinal, 2, ',', '.') ?>
         </p>
-        <a class="back" href="ex5.html">← voltar</a>
+        <a class="back" href="ex6.html">← voltar</a>
     </div>
 </body>
 </html>
