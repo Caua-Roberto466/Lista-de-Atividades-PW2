@@ -1,27 +1,22 @@
 <?php
-$num1 = $_POST['num1'];
-$num2 = $_POST['num2'];
-$num3 = $_POST['num3'];
-
-$qdrd1 = pow($num1, 2);
-$qdrd2 = pow($num2, 2);
-$qdrd3 = pow($num3, 2);
-
-$soma = $qdrd1 + $qdrd2 + $qdrd3;
+$sal = (float) $_POST['sal'];
+$grat = $sal * (10/100);
+$impst = $sal * (20/100);
+$salFinal = $sal + $grat - $impst; 
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soma dos quadrados</title>
+    <title>Salário final</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h3>A soma dos quadrados é:</h3>
+        <h3>O valor final do salário é:</h3>
         <p class="resultado">
-            <?= number_format($soma, 1, ',', '.') ?>
+            <?= number_format($salFinal, 2, ',', '.') ?>
         </p>
         <a class="back" href="ex5.html">← voltar</a>
     </div>
