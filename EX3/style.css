@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+form, .result-box {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 360px;
+    height: fit-content;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #555;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fafafa;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #888;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 9px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: transparent;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+button[type="submit"]:hover {
+    background: #f0f0f0;
+}
+
+/* resultado */
+.result-box {
+    text-align: center;
+    padding: 2.5rem 2rem;
+}
+
+.status {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.status.aprovado {
+    color: #2a7a4b;
+}
+
+.status.reprovado {
+    color: #b0351e;
+}
+
+.media {
+    font-size: 0.95rem;
+    color: #888;
+    margin-bottom: 1.75rem;
+}
+
+.back {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 7px 14px;
+    text-align: center;
+}
+
+.back:hover {
+    background: #f0f0f0;
+}

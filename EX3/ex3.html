@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de Notas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="processar.php" method="post" onsubmit="return validar()">
+        <h3>Média de Notas</h3>
+        <label for="nota1">Insira a nota 1</label>
+        <input type="text" name="nota1" id="nota1" required placeholder="Digite a nota 1">
+        <br>
+        <label for="nota2">Insira a nota 2</label>
+        <input type="text" name="nota2" id="nota2" required placeholder="Digite a nota 2">
+        <br>
+        <label for="nota3">Insira a nota 3</label>
+        <input type="text" name="nota3" id="nota3" required placeholder="Digite a nota 3">
+        <br>
+        <label for="nota4">Insira a nota 4</label>
+        <input type="text" name="nota4" id="nota4" required placeholder="Digite a nota 4">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        function validar() {
+            const notas = ['nota1', 'nota2', 'nota3', 'nota4'];
+
+            for (let id of notas) {
+                const valor = parseFloat(document.getElementById(id).value.replace(',', '.'));
+
+                if (isNaN(valor) || valor < 0 || valor > 10) {
+                    alert('Nota inválida! Digite um valor entre 0 e 10.');
+                    return false; // impede o envio
+                }
+            }
+
+            return true; // libera o envio
+        }
+    </script>
+</body>
+</html>

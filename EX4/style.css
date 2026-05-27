@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+form, .result-box {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 360px;
+    height: fit-content;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #555;
+    display: block;
+    margin-bottom: 6px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fafafa;
+    margin-bottom: 1rem;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #888;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 9px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: transparent;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background: #f0f0f0;
+}
+
+.card {
+    background: #f9f9f9;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card.highlight {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+}
+
+.card-label {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.card-value {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #111;
+}
+
+.card.highlight .card-value {
+    font-size: 1.1rem;
+    color: #2a7a4b;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: #e6f4ed;
+    color: #2a7a4b;
+    margin-left: 6px;
+}
+
+.back {
+    display: block;
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+    color: #555;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 7px 14px;
+    text-align: center;
+}
+
+.back:hover {
+    background: #f0f0f0;
+}

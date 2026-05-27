@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca de variáveis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="processar.php" method="post" onsubmit="return validar()">
+        <h3>Troca de variáveis</h3>
+        <label for="a">Insira o valor de A</label>
+        <input type="text" name="a" id="a" required placeholder="Digite o valor de A">
+        <label for="b">Insira o valor de B</label>
+        <input type="text" name="b" id="b" required placeholder="Digite o valor de B">
+        <p id="erro" style="color: red; font-size: 0.85rem; margin-bottom: 1rem; display: none;">
+            Valor inválido! Digite apenas números inteiros.
+        </p>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        function validar() {
+            const campos = ['a', 'b'];
+            const erro = document.getElementById('erro');
+
+            for (let id of campos) {
+                const valor = document.getElementById(id).value;
+
+                if (isNaN(valor) || valor.trim() === '' || valor.includes('.')) {
+                    erro.style.display = 'block';
+                    return false;
+                }
+            }
+
+            erro.style.display = 'none';
+            return true;
+        }
+    </script>
+</body>
+</html>
