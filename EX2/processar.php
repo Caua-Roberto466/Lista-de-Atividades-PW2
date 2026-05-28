@@ -34,7 +34,7 @@ $final = $preco - $economizado;
             <span class="card-value">R$ <?= number_format($final, 2, ',', '.') ?></span>
         </div>
 
-        <a class="back" href="index.html">← voltar</a>
+        <a class="back" href="ex2.html">← voltar</a>
     </div>
 </body>
 </html>
