@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="processar.php" method="post" onsubmit="return validar()">
+        <h3>Calculadora</h3>
+        <label for="num1">Insira o 1º número</label>
+        <input type="text" name="num1" id="num1" required placeholder="Digite o 1º número">
+        <label for="operador">Insira o operador</label>
+        <input type="text" name="operador" id="operador" required placeholder="+ - * /">
+        <label for="num2">Insira o 2º número</label>
+        <input type="text" name="num2" id="num2" required placeholder="Digite o 2º número">
+        <p id="erro" style="color: red; font-size: 120%; display: none; font-family: Arial, Helvetica, sans-serif;">Valor inválido! Digite apenas números.</p>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        function validar() {
+            const erro = document.getElementById('erro');
+            const num1 = document.getElementById('num1').value;
+            const num2 = document.getElementById('num2').value;
+            const operador = document.getElementById('operador').value.trim();
+            const operadoresValidos = ['+', '-', '*', '/'];
+
+            if (isNaN(num1) || num1.trim() === '' || isNaN(num2) || num2.trim() === '') {
+                erro.style.display = 'block';
+                erro.textContent = 'Valor inválido! Digite apenas números.';
+                return false;
+            }
+
+            if (!operadoresValidos.includes(operador)) {
+                erro.style.display = 'block';
+                erro.textContent = 'Operador inválido! Use + - * /';
+                return false;
+            }
+
+            if (operador === '/' && parseFloat(num2) === 0) {
+                erro.style.display = 'block';
+                erro.textContent = 'Divisão por zero não é permitida!';
+                return false;
+            }
+
+            erro.style.display = 'none';
+            return true;
+        }
+    </script>
+</body>
+</html>

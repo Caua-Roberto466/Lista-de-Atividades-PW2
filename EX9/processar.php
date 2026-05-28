@@ -20,9 +20,9 @@ for($i = $inicio; $i <= $fim; $i++){
 </head>
 <body>
     <div class="container">
-        <h3>A soma dos quadrados é:</h3>
+        <h3>A soma dos ímpares é:</h3>
         <p class="resultado">
-            <?= "A soma dos impares é $soma" ?>
+            <?= "$soma" ?>
         </p>
         <a class="back" href="ex9.html">← voltar</a>
     </div>

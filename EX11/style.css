@@ -77,19 +77,43 @@ button[type="submit"]:hover {
 
 /* resultado */
 .container {
-    text-align: center;
-    padding: 2.5rem 2rem;
+    padding: 2rem;
 }
 
-.resultado {
-    font-size: 2rem;
-    font-weight: 600;
+.card {
+    background: #f9f9f9;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card.highlight {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+}
+
+.card-label {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.card-value {
+    font-size: 1rem;
+    font-weight: 500;
     color: #111;
-    margin: 1rem 0 1.75rem;
+}
+
+.card.highlight .card-value {
+    font-size: 1.1rem;
+    color: #2a7a4b;
 }
 
 .back {
     display: block;
+    margin-top: 1.25rem;
     font-size: 0.9rem;
     color: #555;
     text-decoration: none;
